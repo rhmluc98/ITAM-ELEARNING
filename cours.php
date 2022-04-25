@@ -76,7 +76,7 @@ $cours_baniere_img = $row_cours_baniere_img['img_fichier'];
                          }else
                          {
                         ?>
-                            <h2>Tout les cours publiés</h2>
+                            <h2>Tout les cours publier</h2>
                         
                         <?php } ?>
                         <p>There is a moment in the life of any aspiring astronomer that it is time to buy that first
