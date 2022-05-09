@@ -2,10 +2,10 @@
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le : jeu. 28 avr. 2022 à 00:45
--- Version du serveur :  10.4.17-MariaDB
--- Version de PHP : 7.4.13
+-- Host: 127.0.0.1
+-- Generation Time: May 09, 2022 at 01:42 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.4.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `enseignement`
+-- Database: `enseignement`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `admins`
+-- Table structure for table `admins`
 --
 
 CREATE TABLE `admins` (
@@ -38,7 +38,7 @@ CREATE TABLE `admins` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `admins`
+-- Dumping data for table `admins`
 --
 
 INSERT INTO `admins` (`id_admin`, `nom_admin`, `postnom_admin`, `admin_numero`, `img_admin`, `admin_email`, `admin_password`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `admins` (`id_admin`, `nom_admin`, `postnom_admin`, `admin_numero`, 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `classes`
+-- Table structure for table `classes`
 --
 
 CREATE TABLE `classes` (
@@ -58,7 +58,7 @@ CREATE TABLE `classes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `classes`
+-- Dumping data for table `classes`
 --
 
 INSERT INTO `classes` (`id_classe`, `description`, `section`, `id_titulaire`) VALUES
@@ -70,7 +70,7 @@ INSERT INTO `classes` (`id_classe`, `description`, `section`, `id_titulaire`) VA
 -- --------------------------------------------------------
 
 --
--- Structure de la table `comptes`
+-- Table structure for table `comptes`
 --
 
 CREATE TABLE `comptes` (
@@ -85,7 +85,7 @@ CREATE TABLE `comptes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `comptes`
+-- Dumping data for table `comptes`
 --
 
 INSERT INTO `comptes` (`id_compte`, `nom_utilisateur`, `utilisateur_type`, `login`, `utilisateur_password`, `acces`, `statut`, `utilisateur_id`) VALUES
@@ -107,7 +107,7 @@ INSERT INTO `comptes` (`id_compte`, `nom_utilisateur`, `utilisateur_type`, `logi
 -- --------------------------------------------------------
 
 --
--- Structure de la table `discussions`
+-- Table structure for table `discussions`
 --
 
 CREATE TABLE `discussions` (
@@ -119,7 +119,7 @@ CREATE TABLE `discussions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `discussions`
+-- Dumping data for table `discussions`
 --
 
 INSERT INTO `discussions` (`message_id`, `contenu`, `date`, `id_exp`, `id_cour`) VALUES
@@ -134,7 +134,7 @@ INSERT INTO `discussions` (`message_id`, `contenu`, `date`, `id_exp`, `id_cour`)
 -- --------------------------------------------------------
 
 --
--- Structure de la table `ecole_info`
+-- Table structure for table `ecole_info`
 --
 
 CREATE TABLE `ecole_info` (
@@ -149,7 +149,7 @@ CREATE TABLE `ecole_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `ecole_info`
+-- Dumping data for table `ecole_info`
 --
 
 INSERT INTO `ecole_info` (`id_info`, `nom_ecole`, `adresse_ecole`, `numero_telephone`, `adresse_email`, `devise_ecole`, `details_ecole`, `photo_ecole`) VALUES
@@ -158,7 +158,7 @@ INSERT INTO `ecole_info` (`id_info`, `nom_ecole`, `adresse_ecole`, `numero_telep
 -- --------------------------------------------------------
 
 --
--- Structure de la table `eleves`
+-- Table structure for table `eleves`
 --
 
 CREATE TABLE `eleves` (
@@ -175,7 +175,7 @@ CREATE TABLE `eleves` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `eleves`
+-- Dumping data for table `eleves`
 --
 
 INSERT INTO `eleves` (`id_eleves`, `nom_eleves`, `postnom_eleves`, `prenom_eleves`, `classe_id`, `matricule`, `Sexe`, `adresse`, `eleve_img`, `annee_insc`) VALUES
@@ -193,7 +193,7 @@ INSERT INTO `eleves` (`id_eleves`, `nom_eleves`, `postnom_eleves`, `prenom_eleve
 -- --------------------------------------------------------
 
 --
--- Structure de la table `eleves_notes`
+-- Table structure for table `eleves_notes`
 --
 
 CREATE TABLE `eleves_notes` (
@@ -207,7 +207,7 @@ CREATE TABLE `eleves_notes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `eleves_notes`
+-- Dumping data for table `eleves_notes`
 --
 
 INSERT INTO `eleves_notes` (`note_id`, `reponse`, `date`, `question_id`, `cours_id`, `eleve_id`, `prof_id`) VALUES
@@ -221,7 +221,7 @@ INSERT INTO `eleves_notes` (`note_id`, `reponse`, `date`, `question_id`, `cours_
 -- --------------------------------------------------------
 
 --
--- Structure de la table `enseignant`
+-- Table structure for table `enseignant`
 --
 
 CREATE TABLE `enseignant` (
@@ -239,7 +239,7 @@ CREATE TABLE `enseignant` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `enseignant`
+-- Dumping data for table `enseignant`
 --
 
 INSERT INTO `enseignant` (`id_enseignant`, `nom_enseignant`, `postnom_enseignant`, `prenom_enseignant`, `matricule`, `etat_civile`, `sexe`, `numero_telephone`, `addresse`, `date_insc`, `photo`) VALUES
@@ -252,7 +252,7 @@ INSERT INTO `enseignant` (`id_enseignant`, `nom_enseignant`, `postnom_enseignant
 -- --------------------------------------------------------
 
 --
--- Structure de la table `evaluations`
+-- Table structure for table `evaluations`
 --
 
 CREATE TABLE `evaluations` (
@@ -271,7 +271,7 @@ CREATE TABLE `evaluations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `evaluations`
+-- Dumping data for table `evaluations`
 --
 
 INSERT INTO `evaluations` (`evaluation_id`, `question`, `ponderation`, `duree`, `assertion1`, `assertion2`, `assertion3`, `assertion4`, `assertion5`, `reponse`, `cours_id`, `date`) VALUES
@@ -282,7 +282,7 @@ INSERT INTO `evaluations` (`evaluation_id`, `question`, `ponderation`, `duree`, 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `horaire_classe`
+-- Table structure for table `horaire_classe`
 --
 
 CREATE TABLE `horaire_classe` (
@@ -300,7 +300,7 @@ CREATE TABLE `horaire_classe` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `horaire_classe`
+-- Dumping data for table `horaire_classe`
 --
 
 INSERT INTO `horaire_classe` (`horaire_id`, `jour`, `premiere_h`, `deuxieme_h`, `troisieme_h`, `quatrieme_h`, `cinquieme_h`, `sixieme_h`, `septieme_h`, `huitieme_h`, `classe_id`) VALUES
@@ -312,7 +312,7 @@ INSERT INTO `horaire_classe` (`horaire_id`, `jour`, `premiere_h`, `deuxieme_h`, 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `horaire_cours`
+-- Table structure for table `horaire_cours`
 --
 
 CREATE TABLE `horaire_cours` (
@@ -326,7 +326,7 @@ CREATE TABLE `horaire_cours` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `horaire_cours`
+-- Dumping data for table `horaire_cours`
 --
 
 INSERT INTO `horaire_cours` (`horaire_cours_id`, `nom_cours`, `jour`, `endroit`, `heure_debut`, `heure_fin`, `class_id`) VALUES
@@ -363,7 +363,7 @@ INSERT INTO `horaire_cours` (`horaire_cours_id`, `nom_cours`, `jour`, `endroit`,
 -- --------------------------------------------------------
 
 --
--- Structure de la table `images`
+-- Table structure for table `images`
 --
 
 CREATE TABLE `images` (
@@ -374,7 +374,7 @@ CREATE TABLE `images` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `images`
+-- Dumping data for table `images`
 --
 
 INSERT INTO `images` (`id_img`, `img_nom`, `img_fichier`, `annee_sco`) VALUES
@@ -388,7 +388,7 @@ INSERT INTO `images` (`id_img`, `img_nom`, `img_fichier`, `annee_sco`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `lecons`
+-- Table structure for table `lecons`
 --
 
 CREATE TABLE `lecons` (
@@ -400,7 +400,7 @@ CREATE TABLE `lecons` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `lecons`
+-- Dumping data for table `lecons`
 --
 
 INSERT INTO `lecons` (`id_lecons`, `cours`, `titre`, `contenu`, `id_class`) VALUES
@@ -420,7 +420,7 @@ INSERT INTO `lecons` (`id_lecons`, `cours`, `titre`, `contenu`, `id_class`) VALU
 -- --------------------------------------------------------
 
 --
--- Structure de la table `messages_recu`
+-- Table structure for table `messages_recu`
 --
 
 CREATE TABLE `messages_recu` (
@@ -433,7 +433,7 @@ CREATE TABLE `messages_recu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `messages_recu`
+-- Dumping data for table `messages_recu`
 --
 
 INSERT INTO `messages_recu` (`massage_id`, `nom_exp`, `email_exp`, `sujet`, `contenu_msg`, `date`) VALUES
@@ -443,7 +443,7 @@ INSERT INTO `messages_recu` (`massage_id`, `nom_exp`, `email_exp`, `sujet`, `con
 -- --------------------------------------------------------
 
 --
--- Structure de la table `reponse_discution`
+-- Table structure for table `reponse_discution`
 --
 
 CREATE TABLE `reponse_discution` (
@@ -456,7 +456,7 @@ CREATE TABLE `reponse_discution` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `reponse_discution`
+-- Dumping data for table `reponse_discution`
 --
 
 INSERT INTO `reponse_discution` (`reponse_id`, `contenu_reponse`, `date`, `id_expediteur`, `id_course`, `message_id`) VALUES
@@ -471,7 +471,7 @@ INSERT INTO `reponse_discution` (`reponse_id`, `contenu_reponse`, `date`, `id_ex
 -- --------------------------------------------------------
 
 --
--- Structure de la table `section`
+-- Table structure for table `section`
 --
 
 CREATE TABLE `section` (
@@ -481,7 +481,7 @@ CREATE TABLE `section` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `section`
+-- Dumping data for table `section`
 --
 
 INSERT INTO `section` (`id_section`, `description`, `annee`) VALUES
@@ -493,7 +493,7 @@ INSERT INTO `section` (`id_section`, `description`, `annee`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `t_cours`
+-- Table structure for table `t_cours`
 --
 
 CREATE TABLE `t_cours` (
@@ -510,7 +510,7 @@ CREATE TABLE `t_cours` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `t_cours`
+-- Dumping data for table `t_cours`
 --
 
 INSERT INTO `t_cours` (`id_cours`, `titre_cours`, `nombre_heures`, `introduction_gene`, `synthese_gene`, `fichier_pdf`, `id_classe`, `id_enseignant`, `date`, `cours_disponibilite`) VALUES
@@ -525,213 +525,213 @@ INSERT INTO `t_cours` (`id_cours`, `titre_cours`, `nombre_heures`, `introduction
 (9, 'BASE DE DONNEE', 10, 'L’application des nouvelles technologies de l’information et de la communication (NTIC) au domaine de la formation a conduit à la création massive d’une nouvelle réalité technique de l’enseignement tant en mode présentiel qu’à distance. Cette technologie dans la formation à distance a fait apparaitre un nouveau mode d’apprentissage appelé le e-learning. L’e-learning est un terme anglais qui veut dire « apprentissage par des moyens électroniques ».', 'Il s’agit d’une évolution rapide des technologies pour l’apprentissage, rendue possible par le développement planétaire de l’Internet. Ce mode d’apprentissage est basé sur l’accès à des formations en ligne, Internet ou Intranet ou d’un autre média électronique. Cet accès permet de développer les compétences des apprenants, tout en rendant le processus d’apprentissage indépendant du temps et du lieu.', '1_BASE DE DONNEE.pdf', 1, 7, '2021-10-23', 1);
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `admins`
+-- Indexes for table `admins`
 --
 ALTER TABLE `admins`
   ADD PRIMARY KEY (`id_admin`);
 
 --
--- Index pour la table `classes`
+-- Indexes for table `classes`
 --
 ALTER TABLE `classes`
   ADD PRIMARY KEY (`id_classe`);
 
 --
--- Index pour la table `comptes`
+-- Indexes for table `comptes`
 --
 ALTER TABLE `comptes`
   ADD PRIMARY KEY (`id_compte`);
 
 --
--- Index pour la table `discussions`
+-- Indexes for table `discussions`
 --
 ALTER TABLE `discussions`
   ADD PRIMARY KEY (`message_id`);
 
 --
--- Index pour la table `ecole_info`
+-- Indexes for table `ecole_info`
 --
 ALTER TABLE `ecole_info`
   ADD PRIMARY KEY (`id_info`);
 
 --
--- Index pour la table `eleves`
+-- Indexes for table `eleves`
 --
 ALTER TABLE `eleves`
   ADD PRIMARY KEY (`id_eleves`);
 
 --
--- Index pour la table `eleves_notes`
+-- Indexes for table `eleves_notes`
 --
 ALTER TABLE `eleves_notes`
   ADD PRIMARY KEY (`note_id`);
 
 --
--- Index pour la table `enseignant`
+-- Indexes for table `enseignant`
 --
 ALTER TABLE `enseignant`
   ADD PRIMARY KEY (`id_enseignant`);
 
 --
--- Index pour la table `evaluations`
+-- Indexes for table `evaluations`
 --
 ALTER TABLE `evaluations`
   ADD PRIMARY KEY (`evaluation_id`);
 
 --
--- Index pour la table `horaire_classe`
+-- Indexes for table `horaire_classe`
 --
 ALTER TABLE `horaire_classe`
   ADD PRIMARY KEY (`horaire_id`);
 
 --
--- Index pour la table `horaire_cours`
+-- Indexes for table `horaire_cours`
 --
 ALTER TABLE `horaire_cours`
   ADD PRIMARY KEY (`horaire_cours_id`);
 
 --
--- Index pour la table `images`
+-- Indexes for table `images`
 --
 ALTER TABLE `images`
   ADD PRIMARY KEY (`id_img`);
 
 --
--- Index pour la table `lecons`
+-- Indexes for table `lecons`
 --
 ALTER TABLE `lecons`
   ADD PRIMARY KEY (`id_lecons`);
 
 --
--- Index pour la table `messages_recu`
+-- Indexes for table `messages_recu`
 --
 ALTER TABLE `messages_recu`
   ADD PRIMARY KEY (`massage_id`);
 
 --
--- Index pour la table `reponse_discution`
+-- Indexes for table `reponse_discution`
 --
 ALTER TABLE `reponse_discution`
   ADD PRIMARY KEY (`reponse_id`);
 
 --
--- Index pour la table `section`
+-- Indexes for table `section`
 --
 ALTER TABLE `section`
   ADD PRIMARY KEY (`id_section`);
 
 --
--- Index pour la table `t_cours`
+-- Indexes for table `t_cours`
 --
 ALTER TABLE `t_cours`
   ADD PRIMARY KEY (`id_cours`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `admins`
+-- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `classes`
+-- AUTO_INCREMENT for table `classes`
 --
 ALTER TABLE `classes`
   MODIFY `id_classe` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT pour la table `comptes`
+-- AUTO_INCREMENT for table `comptes`
 --
 ALTER TABLE `comptes`
   MODIFY `id_compte` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT pour la table `discussions`
+-- AUTO_INCREMENT for table `discussions`
 --
 ALTER TABLE `discussions`
   MODIFY `message_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT pour la table `ecole_info`
+-- AUTO_INCREMENT for table `ecole_info`
 --
 ALTER TABLE `ecole_info`
   MODIFY `id_info` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `eleves`
+-- AUTO_INCREMENT for table `eleves`
 --
 ALTER TABLE `eleves`
   MODIFY `id_eleves` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT pour la table `eleves_notes`
+-- AUTO_INCREMENT for table `eleves_notes`
 --
 ALTER TABLE `eleves_notes`
   MODIFY `note_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT pour la table `enseignant`
+-- AUTO_INCREMENT for table `enseignant`
 --
 ALTER TABLE `enseignant`
   MODIFY `id_enseignant` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT pour la table `evaluations`
+-- AUTO_INCREMENT for table `evaluations`
 --
 ALTER TABLE `evaluations`
   MODIFY `evaluation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `horaire_classe`
+-- AUTO_INCREMENT for table `horaire_classe`
 --
 ALTER TABLE `horaire_classe`
   MODIFY `horaire_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT pour la table `horaire_cours`
+-- AUTO_INCREMENT for table `horaire_cours`
 --
 ALTER TABLE `horaire_cours`
   MODIFY `horaire_cours_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT pour la table `images`
+-- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
   MODIFY `id_img` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT pour la table `lecons`
+-- AUTO_INCREMENT for table `lecons`
 --
 ALTER TABLE `lecons`
   MODIFY `id_lecons` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT pour la table `messages_recu`
+-- AUTO_INCREMENT for table `messages_recu`
 --
 ALTER TABLE `messages_recu`
   MODIFY `massage_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT pour la table `reponse_discution`
+-- AUTO_INCREMENT for table `reponse_discution`
 --
 ALTER TABLE `reponse_discution`
   MODIFY `reponse_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT pour la table `section`
+-- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
   MODIFY `id_section` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT pour la table `t_cours`
+-- AUTO_INCREMENT for table `t_cours`
 --
 ALTER TABLE `t_cours`
   MODIFY `id_cours` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
